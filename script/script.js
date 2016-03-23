@@ -3,13 +3,11 @@
 (function() {
     window.onload = function() {
         var calculator = new Calculator();
-        var currentNumberOnDisplay = "";
-        
+
         onclick = function(event) {
             var valueButton = event.target.value;
             var text = document.getElementById("text");
-            text.value = currentNumberOnDisplay;
-    
+
             if (valueButton === "•") {
                 if (countPoint(text.value)) {
                     text.value += ".";
@@ -28,7 +26,7 @@
                     case "÷":
                         calculator.setFirstNumber(+text.value);
                         calculator.action = valueButton;
-                        currentNumberOnDisplay = "";
+                        text.value = "";
                         break;
                     case "√":
                         calculator.setFirstNumber(+text.value);
@@ -55,7 +53,6 @@
                         if (calculator.action === "÷") {
                             text.value = calculator.division();
                         }
-                        currentNumberOnDisplay = "";
                         break;
                     case "%":
                         calculator.setSecondNumber(+text.value);
@@ -74,7 +71,6 @@
                         if (calculator.action === "÷") {
                             text.value = calculator.divisionPercent();
                         }
-                        currentNumberOnDisplay = "";
                         break;
                 }
             }
