@@ -15,9 +15,7 @@
                 
             } else if (!(isNaN(valueButton))) {
                 text.value += valueButton;
-                currentNumberOnDisplay +=valueButton;
-            
-                
+
             } else {
                 switch (valueButton) {
                     case "+":
@@ -31,7 +29,6 @@
                     case "√":
                         calculator.setFirstNumber(+text.value);
                         text.value = calculator.squareRoot();
-                        currentNumberOnDisplay = "";
                         break;
                     case "C":
                         location.reload();
