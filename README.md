@@ -1,1 +1,1 @@
-http://valeriary.github.io/Hometask_3_calculator/
+http://valeriary.github.io/Calculator/
